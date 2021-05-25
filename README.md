@@ -1,9 +1,9 @@
 # Ansible Module for Manageengine Patch Configuration
-[Ansible-Galaxy collections](https://galaxy.ansible.com/nikhilpatne/manageengine) repository to create manageengine patch configurations.
+[Ansible-Galaxy collections](https://github.com/GSLabDev/ansible-collection-manageengine.git) repository to create manageengine patch configurations.
 
 ## Installation
 
-For the module to be used you need to have installed [requests](https://github.com/davidban77/gns3fy) library.
+For the module to be used you need to have installed [requests](https://pypi.org/project/requests/) library.
 
 ```
 pip install requests
@@ -12,7 +12,7 @@ pip install requests
 This collections is packaged under ansible-galaxy, so to install it you need to hit following command
 
 ```
-ansible-galaxy collection install gslab.manageengine
+ansible-galaxy collection install idmsubs.manageengine
 ```
 
 ## Features
@@ -36,7 +36,7 @@ Here are some examples of how to use the module.
 - hosts: localhost
   # Call the collections to use the respective modules
   collections:
-    - gslab.manageengine
+    - idmsubs.manageengine
   tasks:
     - name: Get the server facts
       patch_configuration:
@@ -61,7 +61,7 @@ Alternative way
 - hosts: localhost
   tasks:
     - name: Get the server facts
-      gslab.manageengine.patch_configuration:
+      idmsubs.manageengine.patch_configuration:
         url: "{{ manageengine_url }}"
         port: "{{ manageengine_port }}"
         username: "{{ manageengine_username }}"
